@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Webapp for Loan adjudication</title>
+</head>
+
+<body>
+ <div class="login">
+  <h1 style="font-family:Arial;">Webapp for loan adjudication </h1>
+  <p style="color:red; font-family:Arial;">(Work in progress...)</p>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="gender" placeholder="Gender (Male/Female)" required="required" />
+      <input type="text" name="married" placeholder="Married (Yes/No)" required="required" />
+      <input type="text" name="dependents" placeholder="Dependents (0/1/2/3+)" required="required" />
+      <input type="text" name="education" placeholder="Education (Graduate/Not Graduate)" required="required" />
+        <br><br>
+      <input type="text" name="selfemployed" placeholder="Self Employed (Yes/No)" required="required" />
+      <input type="text" name="credithistory" placeholder="Credit History (Yes/No)" required="required" />
+      <input type="text" name="propertyarea" placeholder="Area (Urban/Semiurban/Rural)" required="required" />
+      <input type="number" name="applicantincome" placeholder="Aplicant Income" required="required" />        
+        <br><br>
+      <input type="number" name="coapplicantincome" placeholder="Coaplicant Income" required="required" />
+      <input type="number" name="loanammount" placeholder="Loan Ammount" required="required" />
+      <input type="number" name="loanammountterm" placeholder="Loan Ammount Term" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        <br><br>
+    </form>
+
+   <br>
+   <br>
+   <h2 style="font-family:Arial;">{{ output }}</h2>
+
+ </div>
+
+<p style="font-family:Arial; font-size:85%;"><b>Instructions: </b>
+  <br><br>
+Fill the fields with the data suggested between ():</p>
+<ul style="font-family:Arial; font-size:85%;">
+  <li>Gender: Male or Female </li>
+  <li>Married: Yes or No </li>
+  <li>Dependents: 0, 1, 2 or 3+ </li>
+  <li>Education: Graduate or Not graduate </li>
+  <li>Self Employed: Yes or No </li>
+  <li>Credit History: Yes or No </li>
+  <li>Property Area: Urban, Semiurban or Rural </li>
+</ul>  
+<p style="font-family:Arial; font-size:85%;">The fileds with not suggested data is for numbers</p>
+<ul style="font-family:Arial; font-size:85%;">
+  <li>Applicant Income </li>
+  <li>Coapplicant Income </li>
+  <li>Loan Ammount</li>
+  <li>Loan Ammount Term</li>
+</ul>
+
+<br><br>
+<p style="font-family:Arial; font-size:85%;"><b>Credits: </b>
+  <br><br>
+Victor Lucia Jimenez</p>
+<a style="font-family:Arial; font-size:85%;" href="https://www.linkedin.com/in/victor-lucia/">LinkedIn</a>
+<a style="font-family:Arial; font-size:85%;" href="https://github.com/Laserdan">   GitHub</a>
+
+</body>
+</html>
