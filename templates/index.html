@@ -1,37 +1,91 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <link rel="stylesheet"  href= "styles.css">
   <title>Webapp for Loan adjudication</title>
 </head>
 
 <body>
- <div class="login">
-  <h1 style="font-family:Arial;">Webapp for loan adjudication </h1>
-  <p style="color:red; font-family:Arial;">(Work in progress...)</p>
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="gender" placeholder="Gender (Male/Female)" required="required" />
-      <input type="text" name="married" placeholder="Married (Yes/No)" required="required" />
-      <input type="text" name="dependents" placeholder="Dependents (0/1/2/3+)" required="required" />
-      <input type="text" name="education" placeholder="Education (Graduate/Not Graduate)" required="required" />
+  <div class="img"></div>
+    <h1 style="font-family:Arial;">Loan Approve Prediction </h1>
+    <form class="form" action="{{ url_for('predict')}}"method="post">
+        <div>
+          <label for="gender" style="font-family:verdana;">Gender:</label>
+          <select id="gender" name="gender" required="required" style="font-family:verdana;">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <br>
+        <div>  
+          <label for="married" style="font-family:verdana;">Married:</label>
+          <select id="married" name="married" required="required" style="font-family:verdana;">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="dependents" style="font-family:verdana;">Dependents:</label>
+          <select id="dependents" name="dependents" required="required" style="font-family:verdana;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3+">3+</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="education" style="font-family:verdana;">Education:</label>
+          <select id="education" name="education" required="required" style="font-family:verdana;">
+            <option value="graduated">Graduated</option>
+            <option value="not graduated">Not Graduated</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="selfemployed" style="font-family:verdana;">Self Employed:</label>
+          <select id="selfemployed" name="selfemployed" required="required" style="font-family:verdana;">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="credithistory" style="font-family:verdana;">Credit History:</label>
+          <select id="credithistory" name="credithistory" required="required" style="font-family:verdana;">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <br>
+        <div>  
+          <label for="propertyarea" style="font-family:verdana;">Property Area:</label>
+          <select id="propertyarea" name="propertyarea" required="required" style="font-family:verdana;">
+            <option value="urban">Urban</option>
+            <option value="semiurban">Semiurban</option>
+            <option value="rural">Rural</option>
+          </select>
+        </div>
+        
         <br><br>
-      <input type="text" name="selfemployed" placeholder="Self Employed (Yes/No)" required="required" />
-      <input type="text" name="credithistory" placeholder="Credit History (Yes/No)" required="required" />
-      <input type="text" name="propertyarea" placeholder="Area (Urban/Semiurban/Rural)" required="required" />
-      <input type="number" name="applicantincome" placeholder="Aplicant Income" required="required" />        
+        <p style="font-family:verdana;">Application Income: <input type="number" name="applicantincome" placeholder="Aplicant Income" required="required" /></p>
+        <p style="font-family:verdana;">Co Application Income: <input type="number" name="coapplicantincome" placeholder="Coaplicant Income" required="required" /></p>
+        <p style="font-family:verdana;">Loan Amount:<input type="number" name="loanammount" placeholder="Loan Ammount" required="required" /></p>
+        <p style="font-family:verdana;">Loan Amount Term:<input type="number" name="loanammountterm" placeholder="Loan Ammount Term" required="required" /></p>
         <br><br>
-      <input type="number" name="coapplicantincome" placeholder="Coaplicant Income" required="required" />
-      <input type="number" name="loanammount" placeholder="Loan Ammount" required="required" />
-      <input type="number" name="loanammountterm" placeholder="Loan Ammount Term" required="required" />
-      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
-        <br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+          
     </form>
 
-   <br>
-   <br>
-   <h2 style="font-family:Arial;">{{ output }}</h2>
-
- </div>
+    <br>
+    <br>
+    <h2 style="font-family:Arial;">{{ output }}</h2>
 
 <p style="font-family:Arial; font-size:85%;"><b>Instructions: </b>
   <br><br>
@@ -56,9 +110,9 @@ Fill the fields with the data suggested between ():</p>
 <br><br>
 <p style="font-family:Arial; font-size:85%;"><b>Credits: </b>
   <br><br>
-Victor Lucia Jimenez</p>
-<a style="font-family:Arial; font-size:85%;" href="https://www.linkedin.com/in/victor-lucia/">LinkedIn</a>
-<a style="font-family:Arial; font-size:85%;" href="https://github.com/Laserdan">   GitHub</a>
+Leandro Benetton</p>
+<a style="font-family:Arial; font-size:85%;" href="https://www.linkedin.com/in/leandrobenetton/">LinkedIn</a>
+<a style="font-family:Arial; font-size:85%;" href="https://github.com/lbenetton">   GitHub</a>
 
 </body>
 </html>
