@@ -86,7 +86,7 @@ def predict():
     labels = ['Loan Rejected', 'Loan accepted']
     result = labels[prediction[0]]
 
-    return render_template('index.html', output='Status of the loan: {}'.format(result))
+    return render_template('index.html', output='Status: {}'.format(result))
 
 
 if __name__ == '__main__':
