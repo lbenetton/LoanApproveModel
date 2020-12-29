@@ -15,7 +15,7 @@ def load_model():
 # home page
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('app.html')
 
 
 # predict the result and return it

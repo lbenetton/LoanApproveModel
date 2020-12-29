@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title style="font-family:verdana;">Webapp for Loan adjudication</title>
+  <title style="font-family:verdana;">WebApp Loan Approve</title>
+  <link rel="stylesheet"  href= "app.css">
 </head>
 
 <style>
   body {
     text-align: center; 
-    background-image: "prestamo.jpg";
+    background-color:lightblue;
+    }
+    
+  .myDiv {
+      text-align: center;
     }
 </style>
 
 <body>
+  <h1 style="font-family:Arial;">Loan Approve Predictions </h1>
+  <img src="LoanApprove.jpg" alt="Loan Approve">
+  <br><br>
+
   <div class="img"></div>
-    <h1 style="font-family:Arial;">Loan Approve Prediction </h1>
     <form class="form" action="{{ url_for('predict')}}"method="post">
-        <div>
+        <div class="myDiv">
           <label for="gender" style="font-family:verdana;">Gender:</label>
-          <select id="gender" name="gender" required="required" style="font-family:verdana;">
+          <select id="gender" name="gender" required="required" style="font-family:verdana; width:250px">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
@@ -29,7 +37,7 @@
         <br>
         <div>  
           <label for="married" style="font-family:verdana;">Married:</label>
-          <select id="married" name="married" required="required" style="font-family:verdana;">
+          <select id="married" name="married" required="required" style="font-family:verdana; width:250px">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
@@ -37,7 +45,7 @@
         <br>
         <div>
           <label for="dependents" style="font-family:verdana;">Dependents:</label>
-          <select id="dependents" name="dependents" required="required" style="font-family:verdana;">
+          <select id="dependents" name="dependents" required="required" style="font-family:verdana; width:250px">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -47,7 +55,7 @@
         <br>
         <div>
           <label for="education" style="font-family:verdana;">Education:</label>
-          <select id="education" name="education" required="required" style="font-family:verdana;">
+          <select id="education" name="education" required="required" style="font-family:verdana; width:250px">
             <option value="graduated">Graduated</option>
             <option value="not graduated">Not Graduated</option>
           </select>
@@ -55,7 +63,7 @@
         <br>
         <div>
           <label for="selfemployed" style="font-family:verdana;">Self Employed:</label>
-          <select id="selfemployed" name="selfemployed" required="required" style="font-family:verdana;">
+          <select id="selfemployed" name="selfemployed" required="required" style="font-family:verdana; width:250px">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
@@ -63,7 +71,7 @@
         <br>
         <div>
           <label for="credithistory" style="font-family:verdana;">Credit History:</label>
-          <select id="credithistory" name="credithistory" required="required" style="font-family:verdana;">
+          <select id="credithistory" name="credithistory" required="required" style="font-family:verdana; width:250px">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
@@ -71,7 +79,7 @@
         <br>
         <div>  
           <label for="propertyarea" style="font-family:verdana;">Property Area:</label>
-          <select id="propertyarea" name="propertyarea" required="required" style="font-family:verdana;">
+          <select id="propertyarea" name="propertyarea" required="required" style="font-family:verdana; width:250px">
             <option value="urban">Urban</option>
             <option value="semiurban">Semiurban</option>
             <option value="rural">Rural</option>
